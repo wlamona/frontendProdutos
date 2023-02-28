@@ -1,0 +1,20 @@
+<h2>Publicacao Details</h2> 
+
+<hr/>
+<div *ngIf="publicacao">
+  <div>
+    <label><b>Código </b></label> {{publicacao.titulo}}
+  </div>
+  <div>
+    <label><b>Nome Produto</b></label> {{publicacao.doi}}
+  </div>
+  <div>
+    <label><b>Preço </b></label> {{publicacao.nomeAutor}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Retornar para Listar Todos</button><br>
+
+

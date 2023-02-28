@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+  <head>
+    <title>carloEcommerce</title>
+    <style type="text/css">
+      body {
+      	font-family: Trebuchet MS, sans-serif;
+      	font-size: 15px;
+      	color: #444;
+      	margin-right: 24px;
+      }
+      
+      h1	{
+      	font-size: 25px;
+      }
+      h2	{
+      	font-size: 20px;
+      }
+      h3	{
+      	font-size: 16px;
+      	font-weight: bold;
+      }
+      hr	{
+      	height: 1px;
+      	border: 0;
+      	color: #ddd;
+      	background-color: #ddd;
+      }
+      
+      .app-desc {
+        clear: both;
+        margin-left: 20px;
+      }
+      .param-name {
+        width: 100%;
+      }
+      .license-info {
+        margin-left: 20px;
+      }
+      
+      .license-url {
+        margin-left: 20px;
+      }
+      
+      .model {
+        margin: 0 0 0px 20px;
+      }
+      
+      .method {
+        margin-left: 20px;
+      }
+      
+      .method-notes	{
+      	margin: 10px 0 20px 0;
+      	font-size: 90%;
+      	color: #555;
+      }
+      
+      pre {
+        padding: 10px;
+        margin-bottom: 2px;
+      }
+      
+      .http-method {
+       text-transform: uppercase;
+      }
+      
+      pre.get {
+        background-color: #0f6ab4;
+      }
+      
+      pre.post {
+        background-color: #10a54a;
+      }
+      
+      pre.put {
+        background-color: #c5862b;
+      }
+      
+      pre.delete {
+        background-color: #a41e22;
+      }
+      
+      .huge	{
+      	color: #fff;
+      }
+      
+      pre.example {
+        background-color: #f3f3f3;
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+      
+      code {
+        white-space: pre;
+      }
+      
+      .nickname {
+        font-weight: bold;
+      }
+      
+      .method-path {
+        font-size: 1.5em;
+        background-color: #0f6ab4;
+      }
+      
+      .up {
+        float:right;
+      }
+      
+      .parameter {
+        width: 500px;
+      }
+      
+      .param {
+        width: 500px;
+        padding: 10px 0 0 20px;
+        font-weight: bold;
+      }
+      
+      .param-desc {
+        width: 700px;
+        padding: 0 0 0 20px;
+        color: #777;
+      }
+      
+      .param-type {
+        font-style: italic;
+      }
+      
+      .param-enum-header {
+      width: 700px;
+      padding: 0 0 0 60px;
+      color: #777;
+      font-weight: bold;
+      }
+      
+      .param-enum {
+      width: 700px;
+      padding: 0 0 0 80px;
+      color: #777;
+      font-style: italic;
+      }
+      
+      .field-label {
+        padding: 0;
+        margin: 0;
+        clear: both;
+      }
+      
+      .field-items	{
+      	padding: 0 0 15px 0;
+      	margin-bottom: 15px;
+      }
+      
+      .return-type {
+        clear: both;
+        padding-bottom: 10px;
+      }
+      
+      .param-header {
+        font-weight: bold;
+      }
+      
+      .method-tags {
+        text-align: right;
+      }
+      
+      .method-tag {
+        background: none repeat scroll 0% 0% #24A600;
+        border-radius: 3px;
+        padding: 2px 10px;
+        margin: 2px;
+        color: #FFF;
+        display: inline-block;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+  <h1>carloEcommerce</h1>
+    <div class="app-desc">Projeto API Full Stack</div>
+    <div class="app-desc">Link: <a href="https://carloCommerce.com">Projeto E-commerce</a></div>
+    <div class="app-desc">Contato: <a href="hello@helloreverb.com">giuseppe@ufpa.br</a></div>
+    <div class="app-desc">Version: 2.0.0</div>
+    <div class="app-desc">BasePath:/swaggerHub/carloEcommerce/2.0.0</div>
+    <div class="license-info">Direitos reservados</div>
+    <div class="license-url">http://apache.org/licenses/LICENSE-2.0.html</div>
+  <h2>Estrutura da API</h2>
+
+  <h4><a href="#Produto">Files do aplicativo</a></h4>
+  <ul>
+  <li><a href="#register">carloecommerce/Application.java</a></li>
+  <li><a href="#register">carloecommerce.controller/ProdutoController.java</a></li>
+  <li><a href="#register">carloecommerce.exception/ErrorDetails.java</a></li>
+  <li><a href="#register">carloecommerce.exception/GlobalExceptionHandler.java</a></li>
+  <li><a href="#register">carloecommerce.exception/ResouceNotFoundException.java</a></li>
+  <li><a href="#register">carloecommerce.model/Produto.java</a></li>
+  <li><a href="#register">carloecommerce.repository/ProdutoRepository.java</a></li>
+  </ul>
+  <h4><a href="#ZWave">Metodos REST</a></h4>
+  <ul>
+  <li><a href="#getLightingSummary"><code><span>getAllproduto():</span> Lista todos os produtos cadastrados </code></a></li>
+  <li><a href="#getSwitchState"><code><span>getprodutoById:</span> Busca o produto pelo 'id'</code></a></li>
+  <li><a href="#setDimmer"><code><span>createproduto:</span> Cadastra um novo produto</code></a></li>
+  <li><a href="#setDimmerTimer"><code><span>updateproduto:</span> Atualiza os dados do produto </code></a></li>
+  <li><a href="#setSwitch"><code><span>deleteproduto:</span> Apaga registro de produto </code></a></li>
+  </ul>
+  <h1><a name="Produto">Produto</a></h1>
+  public class Produto { <br><br>
+
+    private long id_product;<br>
+    private String code;<br>
+    private String name;<br>
+    private Double price;<br>
+  </body>
+</html>

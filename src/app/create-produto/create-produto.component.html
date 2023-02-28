@@ -1,0 +1,27 @@
+<h3>Cadastro Publicação</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Código</label>
+      <input type="text" class="form-control" id="titulo" required [(ngModel)]="publicacao.titulo" name="titulo">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Nome Produto</label>
+     <input type="text" class="form-control" id="doi" required [(ngModel)]="publicacao.doi" name="doi">
+
+    </div>
+
+    <div class="form-group">
+      <label for="name">Preço</label>
+      <input type="text" class="form-control" id="nomeAutor" required [(ngModel)]="publicacao.nomeAutor" name="nomeAutor">
+    </div>
+
+    <button type="submit" class="btn btn-success">Enviar</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
